@@ -47,6 +47,7 @@ router.route('/post')
         }
     );
 
+passport.
 router.route('/postjwt')
     .post(authJwtController.isAuthenticated, function (req, res) {
             console.log(req.body);
@@ -109,7 +110,15 @@ router.get('/movies', function(req, res) {
         query: Object.keys(req.query).length === 0 ? null : req.query,
         env: process.env.SECRET_KEY
     });
-});
+}).put('/movies', passport.authenticate('jwt', {session: false}, function(req, res) {
+    res.json({
+        status: 200,
+        message: "movie updated",
+        headers: req.headers,
+        query: Object.keys(req.query).length === 0 ? null : req.query,
+        env: process.env.SECRET_KEY
+    });
+}));
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
