@@ -94,7 +94,13 @@ router.post('/signin', function(req, res) {
 });
 
 router.get('/movies', function(req, res) {
-    res.json({success: true});
+    res.json({
+        status: 200,
+        message: "GET movies",
+        headers: req.headers,
+        query: req.query,
+        end: process.env.SECRET_KEY
+    });
 });
 
 app.use('/', router);
