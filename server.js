@@ -98,7 +98,7 @@ router.get('/movies', function(req, res) {
         status: 200,
         message: "GET movies",
         headers: req.headers,
-        query: Object.keys(req.query).length === 0 ? req.query : null,
+        query: Object.keys(req.query).length === 0 ? null : req.query,
         end: process.env.SECRET_KEY
     });
 });
