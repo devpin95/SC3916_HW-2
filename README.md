@@ -125,10 +125,10 @@ or add a pre-req script similar to the following --*sample in assignment-two.pdf
 
 ## Resources
 
-[http://nodejs.org](http://nodejs.org)
-[http://www.passportjs.org/docs/basic-digest/](http://www.passportjs.org/docs/basic-digest/)
-[https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
-[https://devcenter.heroku.com/articles/config-vars](https://devcenter.heroku.com/articles/config-vars)
+[http://nodejs.org](http://nodejs.org)\
+[http://www.passportjs.org/docs/basic-digest/](http://www.passportjs.org/docs/basic-digest/)\
+[https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)\
+[https://devcenter.heroku.com/articles/config-vars](https://devcenter.heroku.com/articles/config-vars)\
 [https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
 
