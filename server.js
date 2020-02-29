@@ -90,7 +90,7 @@ router.post('/signin', function(req, res) {
         else {
             res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
         }
-    };
+    }
 });
 
 router.get('/movies', function(req, res) {
@@ -113,6 +113,14 @@ router.get('/movies', function(req, res) {
     res.json({
         status: 200,
         message: "movie updated",
+        headers: req.headers,
+        query: Object.keys(req.query).length === 0 ? null : req.query,
+        env: process.env.SECRET_KEY
+    });
+}).delete('/movies', authController.isAuthenticated, function(req, res) {
+    res.json({
+        status: 200,
+        message: "movie deleted",
         headers: req.headers,
         query: Object.keys(req.query).length === 0 ? null : req.query,
         env: process.env.SECRET_KEY
