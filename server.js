@@ -61,7 +61,7 @@ router.route('/postjwt')
 
 router.post('/signup', function(req, res) {
     if (!req.body.username || !req.body.password) {
-        res.json({success: false, msg: 'Please pass username and password.', body: getJSONObject(req)});
+        res.json({success: false, msg: 'Please pass username and password.', body: req.body});
     } else {
         var newUser = {
             username: req.body.username,
@@ -75,22 +75,26 @@ router.post('/signup', function(req, res) {
 
 router.post('/signin', function(req, res) {
 
-        var user = db.findOne(req.body.username);
+    var user = db.findOne(req.body.username);
 
-        if (!user) {
-            res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
+    if (!user) {
+        res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
+    }
+    else {
+        // check if password matches
+        if (req.body.password == user.password)  {
+            var userToken = { id : user.id, username: user.username };
+            var token = jwt.sign(userToken, process.env.SECRET_KEY);
+            res.json({success: true, token: 'JWT ' + token});
         }
         else {
-            // check if password matches
-            if (req.body.password == user.password)  {
-                var userToken = { id : user.id, username: user.username };
-                var token = jwt.sign(userToken, process.env.SECRET_KEY);
-                res.json({success: true, token: 'JWT ' + token});
-            }
-            else {
-                res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
-            }
-        };
+            res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+        }
+    };
+});
+
+router.get('/movies', function(req, res) {
+    res.json({success: true});
 });
 
 app.use('/', router);
