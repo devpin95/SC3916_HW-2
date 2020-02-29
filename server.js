@@ -99,7 +99,15 @@ router.get('/movies', function(req, res) {
         message: "GET movies",
         headers: req.headers,
         query: Object.keys(req.query).length === 0 ? null : req.query,
-        end: process.env.SECRET_KEY
+        env: process.env.SECRET_KEY
+    });
+}).post('/movies', function(req, res) {
+    res.json({
+        status: 200,
+        message: "GET movies",
+        headers: req.headers,
+        query: Object.keys(req.query).length === 0 ? null : req.query,
+        env: process.env.SECRET_KEY
     });
 });
 
