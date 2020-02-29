@@ -109,23 +109,26 @@ complete this assignment.
 - Any requests made to the base URL (no URN specified) should also be rejected.
 
 - Include a Postman project that can shows all the requirements have been met.
-o This project should include valid requests, as well as requests that fail
-o You should have tests with BasicAuth set to the correct username/password and
-sets with wrong password
-o You should have tests that signin and retrieve the JWT token that is then used to
-call the PUT method on /movies – hint (create a signin request and store the
-token in the environment. Then using that token call the PUT method on /movies
-var data = JSON.parse(responseBody);
-postman.setEnvironmentVariable("token", data.token);
+    - This project should include valid requests, as well as requests that fail
+    - You should have tests with BasicAuth set to the correct username/password and
+    sets with wrong password
+    - You should have tests that signin and retrieve the JWT token that is then used to
+    call the PUT method on /movies – hint (create a signin request and store the
+    token in the environment. Then using that token call the PUT method on /movies
+    
+        ```javascript
+        var data = JSON.parse(responseBody);
+        postman.setEnvironmentVariable("token", data.token);
+        ```
 
-or add a pre-req script similar to the following à
+or add a pre-req script similar to the following --*sample in assignment-two.pdf*--
 
 ## Resources
 
 [http://nodejs.org](http://nodejs.org)
 [http://www.passportjs.org/docs/basic-digest/](http://www.passportjs.org/docs/basic-digest/)
-https://devcenter.heroku.com/articles/heroku-cli
-https://devcenter.heroku.com/articles/config-vars
-https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+[https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
+[https://devcenter.heroku.com/articles/config-vars](https://devcenter.heroku.com/articles/config-vars)
+[https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
 
