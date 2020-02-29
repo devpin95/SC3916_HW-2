@@ -1,5 +1,7 @@
 # Assignment Two
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a17eb0f5315a3c65575d#?env%5Bhw2%5D=W3sia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IkpXVCBleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall6WXpBMVpUTXpOalEwTUdaaE1UVTRZVGs0TkdRM1pqTXhNR1l5WkRObE9XSXpNalpqTVdRaUxDSjFjMlZ5Ym1GdFpTSTZJblJsYzNRdGRYTmxjaUlzSW1saGRDSTZNVFU0TXpBeE5UYzNNWDAuQlhIZWVfMy1vZVVyblZqaURpTjBCeEZtMUlISjAwY2NxMGc0em40WUlBRSIsImVuYWJsZWQiOnRydWV9XQ==)
+
 ## Purpose
 
 The purpose of this assignment is to start working with Node.js and become more familiar with
