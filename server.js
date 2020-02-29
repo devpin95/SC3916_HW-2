@@ -104,7 +104,7 @@ router.get('/movies', function(req, res) {
 }).post('/movies', function(req, res) {
     res.json({
         status: 200,
-        message: "GET movies",
+        message: "movie saved",
         headers: req.headers,
         query: Object.keys(req.query).length === 0 ? null : req.query,
         env: process.env.SECRET_KEY
