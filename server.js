@@ -47,7 +47,6 @@ router.route('/post')
         }
     );
 
-passport.
 router.route('/postjwt')
     .post(authJwtController.isAuthenticated, function (req, res) {
             console.log(req.body);
